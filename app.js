@@ -1,5 +1,4 @@
-const API_KEY = "ae4c776814214951bc9b5ba0a6dda530";
-const API_URL = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`;
+const API_URL = "/api/news";
 
 let articles = [];
 let currentIndex = 0;
