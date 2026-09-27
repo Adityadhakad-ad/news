@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mera News App</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <header class="header">
+
+            <div class="brand">
+                <div class="brand-icon">M</div>
+
+                <div>
+                    <h1>MeraNews</h1>
+                    <p>Stay informed. Stay ahead.</p>
+                </div>
+            </div>
+
+            <div class="header-status">
+                <span class="status-dot"></span>
+                <span>Live Headlines</span>
+            </div>
+
+        </header>
+
+        <main class="main">
+
+            <div class="category-row">
+
+                <div>
+                    <span class="eyebrow">LATEST NEWS</span>
+                    <h2>Top Headlines</h2>
+                </div>
+
+                <div class="country">
+                    🇺🇸 United States
+                </div>
+
+            </div>
+
+            <div id="loading" class="loading">
+
+                <div class="spinner"></div>
+
+                <p>Loading latest headlines...</p>
+
+            </div>
+
+            <div id="error" class="error hidden">
+
+                <div class="error-icon">!</div>
+
+                <h3>Unable to load news</h3>
+
+                <p id="error-message">
+                    Something went wrong while fetching the latest headlines.
+                </p>
+
+                <button id="retry-btn">
+                    Try Again
+                </button>
+
+            </div>
+
+            <section id="news-container" class="news-container hidden">
+
+                <article class="news-card">
+
+                    <div class="image-container">
+
+                        <img
+                            id="news-image"
+                            src=""
+                            alt="News article"
+                        >
+
+                        <div class="image-overlay"></div>
+
+                        <span id="source" class="source">
+                            News
+                        </span>
+
+                    </div>
+
+                    <div class="news-content">
+
+                        <div class="meta">
+
+                            <span id="published">
+                                Today
+                            </span>
+
+                            <span class="separator">•</span>
+
+                            <span id="author">
+                                News Desk
+                            </span>
+
+                        </div>
+
+                        <h3 id="news-title">
+                            News headline
+                        </h3>
+
+                        <p id="news-description">
+                            News description
+                        </p>
+
+                        <a
+                            id="read-more"
+                            href="#"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="read-more"
+                        >
+                            Read Full Story
+                            <span>↗</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+                <div class="navigation">
+
+                    <button id="prev-btn" class="nav-btn">
+                        <span>←</span>
+                        Previous
+                    </button>
+
+                    <div class="counter">
+
+                        <span id="current-index">
+                            1
+                        </span>
+
+                        <span class="counter-divider">
+                            /
+                        </span>
+
+                        <span id="total-news">
+                            0
+                        </span>
+
+                    </div>
+
+                    <button id="next-btn" class="nav-btn">
+                        Next
+                        <span>→</span>
+                    </button>
+
+                </div>
+
+            </section>
+
+        </main>
+
+        <footer class="footer">
+
+            <p>
+                MeraNews
+                <span>•</span>
+                Powered by NewsAPI
+            </p>
+
+            <p>
+                News content belongs to respective publishers.
+            </p>
+
+        </footer>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
